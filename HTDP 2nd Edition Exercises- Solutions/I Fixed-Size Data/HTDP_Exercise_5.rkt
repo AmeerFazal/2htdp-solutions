@@ -41,7 +41,6 @@
 ;; Tree
 
 (define TREE-SIZE 100)
-
 (above (circle TREE-SIZE "solid" "green")
        (rectangle (/ TREE-SIZE 10)
                   TREE-SIZE
