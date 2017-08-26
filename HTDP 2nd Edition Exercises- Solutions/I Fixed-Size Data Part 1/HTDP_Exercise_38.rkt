@@ -1,0 +1,24 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname HTDP_Exercise_38) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;; How To Design Programs, 2nd Edition 
+;; Matthias Felleisen, Robert Bruce Findler, Matthew Flatt, Shriram Krishnamurthi
+;; Link to the text book : http://homedirs.ccs.neu.edu/matthias/HtDP2e/
+
+;; Solutions By : Ameer Fazal
+;; www.youtube.com/ameerfazal
+
+;; Exercise 38
+
+;; String -> String
+;; produces a string like the given one with the last character removed
+;(define (string-remove-last str) "") ;stub
+(check-expect (string-remove-last "hello") "hell")
+(check-expect (string-remove-last "hello man") "hello ma")
+(check-expect (string-remove-last "h") "")
+#;
+(define (string-remove-last str)  ;template
+  (... str ...))
+
+(define (string-remove-last str)
+  (substring str 0 (sub1 (string-length str))))

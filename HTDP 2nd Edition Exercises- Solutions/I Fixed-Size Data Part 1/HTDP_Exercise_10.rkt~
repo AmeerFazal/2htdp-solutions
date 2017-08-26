@@ -1,0 +1,28 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname HTDP_Exercise_10) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;; How To Design Programs, 2nd Edition exercises and solutions
+;; Author : Ameer Fazal
+;; www.youtube.com/ameerfazal
+
+;; Exercise8.
+
+(require 2htdp/image)
+
+(define in "hello")
+
+(if (string? in)
+    (string-length in)
+    (if (image? in)
+        (* (image-width in)
+           (image-height in))
+        (if (number? in)
+            (if (<= in 0)
+                in
+                (sub1 in))
+            (if (boolean? in)
+                (if in
+                    10
+                    20)
+                in))))
+            

@@ -1,0 +1,22 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname HTDP_Exercise_23) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;; How To Design Programs, 2nd Edition 
+;; Matthias Felleisen, Robert Bruce Findler, Matthew Flatt, Shriram Krishnamurthi
+;; Link to the text book : http://homedirs.ccs.neu.edu/matthias/HtDP2e/
+
+;; Solutions By : Ameer Fazal
+;; www.youtube.com/ameerfazal
+
+;; Exercise 23
+;; The first 1String in "hello world" is "h".
+;; How does the following function compute this result? 
+
+(define (string-first s)
+  (substring s 0 1))
+
+(string-first "hello world")
+
+;; substring function returns the substring, in the above function line
+;; it is from 0th element to first element (excluding), which is just the
+;; 0th element.
