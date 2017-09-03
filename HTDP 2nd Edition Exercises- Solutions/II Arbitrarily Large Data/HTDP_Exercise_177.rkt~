@@ -1,0 +1,31 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname HTDP_Exercise_177) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;; How To Design Programs, 2nd Edition 
+;; Matthias Felleisen, Robert Bruce Findler, Matthew Flatt, Shriram Krishnamurthi
+;; Link to the text book : http://homedirs.ccs.neu.edu/matthias/HtDP2e/
+
+;; Solutions By : Ameer Fazal
+;; www.youtube.com/ameerfazal
+
+(define-struct editor [pre post])
+; An Editor is a structure:
+;   (make-editor Lo1S Lo1S) 
+; An Lo1S is one of: 
+; – '()
+; – (cons 1String Lo1S)
+
+(define good
+  (cons "g" (cons "o" (cons "o" (cons "d" '())))))
+(define all
+  (cons "a" (cons "l" (cons "l" '()))))
+(define lla
+  (cons "l" (cons "l" (cons "a" '()))))
+ 
+; data example 1: 
+(make-editor all good)
+ 
+; data example 2:
+(make-editor lla good)
+
+
